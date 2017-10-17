@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :artifacts
   #Nest route
   resources :tenants do
     resources :projects
