@@ -13,7 +13,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'do-not-reply@example.com'
-
+  config.sign_out_via = Rails.env.test? ? :get : :delete
   # Configure the class responsible to send e-mails.
   config.mailer = 'Devise::Mailer'
 
